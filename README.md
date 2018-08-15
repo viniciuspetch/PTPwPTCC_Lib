@@ -22,7 +22,8 @@ A Tabela 1 mostra os parâmetros selecionados para todas as configurações, enq
 |Capacidade do veículo | 4 passageiros + motorista |-| 
 |Limite do pedágio | 2 | 3 | 
 |Quantidade de passageiros por vértice | 2*capacidade | 3*capacidade | 
-|Tamanho do universo de tempo | 40% | 70% | 
+|Tamanho do universo de tempo | 40% | 70% |
+
 *Parâmetros utilizados na geração das instâncias, comum a todos os grupos*
 ***
 ***
@@ -31,7 +32,8 @@ A Tabela 1 mostra os parâmetros selecionados para todas as configurações, enq
  | Custo mínimo da aresta | 676 | 888 | 715 | 908 | 
  | Custo máximo da aresta | 966 | 1188 | 983 | 1252 | 
  | Simétrico? | Sim | Não | Sim | Não | 
- | Chance de adicionar pedágio a uma aresta | 27% | 22% | 34% | 37% | 
+ | Chance de adicionar pedágio a uma aresta | 27% | 22% | 34% | 37% |
+ 
 *Parâmetros utilizados na geração das instâncias do grupo g*
 ***
  | Variável | ha | hb | hc | hd
@@ -40,6 +42,7 @@ A Tabela 1 mostra os parâmetros selecionados para todas as configurações, enq
  | Custo máximo da aresta | 926 | 1051 | 944 | 1111
  | Simétrico? | Sim | Não | Sim | Não | 
  | Chance de adicionar pedágio a uma aresta | 30% | 27% | 35% | 32%
+ 
 *Parâmetros utilizados na geração das instâncias do grupo h*
 ***
  | Variável | ia | ib | ic | id
@@ -48,6 +51,7 @@ A Tabela 1 mostra os parâmetros selecionados para todas as configurações, enq
  | Custo máximo da aresta | 1110 | 1017 | 931 | 1182
  | Simétrico? | Sim | Não | Sim | Não | 
  | Chance de adicionar pedágio a uma aresta | 23% | 29% | 38% | 32%
+ 
 *Parâmetros utilizados na geração das instâncias do grupo i*
 ***
 
