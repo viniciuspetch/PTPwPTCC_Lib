@@ -1,5 +1,7 @@
 # PTPwPTCC_Lib
-Set of instances used for the Profitable Tour Problem with Passengers and Time and Cost Constraints
+Set of instances used for the Profitable Tour Problem with Passengers and Time and Cost Constraints.
+
+Conjunto de instâncias utilizadas pelo Problema do Passeio Lucrativo com Passageiros e Restrições de Tempo e Custo.
 
 ## [PT-BR] Criação da instância
 
