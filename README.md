@@ -11,7 +11,14 @@ Os parâmetros foram divididos em 2 categorias: os parâmetros comuns a todas as
 
 Para a geração dos pedágios, para cada aresta foi dado uma probabilidade de conter um pedágio. Caso a aresta contenha um, o courier será obrigado a pagar o valor do pedágio caso a quantidade de passageiros no veículo seja inferior à quantidade estipulada por cada pedágio.
 
-A Tabela 1 mostra os parâmetros selecionados para todas as configurações, enquanto a Tabela 2 mostra os parâmetros sorteados para as configurações do grupo g, a Tabela 3 mostra os parâmetros sorteados para as configurações do grupo h, e Tabela 4 mostra os parâmetros sorteados para as configurações do grupo i.
+O universo de tempo é responsável por limitar os valores da janela de tempo, controlando-as de tal forma que não existam janelas de tempo que não podem ser alcançandas ou buscando limitar o tamanho da solução criando janelas que só serão disponíveis no começo da solução. O valor do universo de tempo é calculado a partir da média das arestas do grafo de tempo, multiplcado pelo tamanho do grafo e por fim, multiplicado por uma porcentagem.
+
+Para o cálculo da janela de tempo, o universo de tempo será dividido em 3 setores, com o primeiro setor sendo de 0% a 30% do universo de tempo, o segundo setor sendo de 35% a 65% do universo de tempo e o terceiro setor sendo de 70% a 100% da janela de tempo. O limite inferior de cada janela de tempo será sorteada de tal forma que o seu valor esteja dentro de um desses três setores. O limite superior da janela de tempo é então calculado a partir do valor do caminho mais curto no grafo de tempo entre o vértice de origem e o vértice de destino do passageiro, multiplicado por uma porcentagem.
+
+A Tabela 1 mostra os parâmetros selecionados para todas as configurações, com a capacidade máxima do veículo, o valor mínimo e máximo para as arestas no grafo de tempo, os bônus dos vértices, os tempos dos vértices, o custo do pedágio, a porcentagem utilizada para o cálculo do limite superior da janela de tempo, a porcentagem utilizada para o cálculo da tarifa do passageiro, o quantidade de passageiros utilizado como ponto de corte para o pedágio, a quantidade de passageiros por vértice, e a porcentagem utilizada no cálculo do universo de tempo.
+
+Tabela 2 mostra os parâmetros sorteados para as configurações do grupo g, a Tabela 3 mostra os parâmetros sorteados para as configurações do grupo h, e Tabela 4 mostra os parâmetros sorteados para as configurações do grupo i. As tabelas definem o valor mínimo e máximo das arestas do grafo de custo, se os grafos de custo e tempo serão simétricos ou assimétricos, e a probabilidade de uma aresta conter um pedágio.
+
 ***
 |Variável | Mínimo | Máximo | 
 |---|:---:|:---:|
@@ -25,17 +32,14 @@ A Tabela 1 mostra os parâmetros selecionados para todas as configurações, enq
 |Limite do pedágio | 2 | 3 | 
 |Quantidade de passageiros por vértice | 2*capacidade | 3*capacidade | 
 |Tamanho do universo de tempo | 40% | 70% |
-
-*Parâmetros utilizados na geração das instâncias, comum a todos os grupos*
-***
+*Tabela 1. Parâmetros utilizados na geração das instâncias, comum a todos os grupos*
 ***
  | Variável | ga | gb | gc | gd | 
  | --- | :---: | :---: | :---: | :---: | 
  | Custo mínimo da aresta | 676 | 888 | 715 | 908 | 
  | Custo máximo da aresta | 966 | 1188 | 983 | 1252 | 
  | Simétrico? | Sim | Não | Sim | Não | 
- | Chance de adicionar pedágio a uma aresta | 27% | 22% | 34% | 37% |
- 
+ | Chance de adicionar pedágio a uma aresta | 27% | 22% | 34% | 37% | 
 *Parâmetros utilizados na geração das instâncias do grupo g*
 ***
  | Variável | ha | hb | hc | hd
@@ -43,8 +47,7 @@ A Tabela 1 mostra os parâmetros selecionados para todas as configurações, enq
  | Custo mínimo da aresta | 560 | 777 | 630 | 781
  | Custo máximo da aresta | 926 | 1051 | 944 | 1111
  | Simétrico? | Sim | Não | Sim | Não | 
- | Chance de adicionar pedágio a uma aresta | 30% | 27% | 35% | 32%
- 
+ | Chance de adicionar pedágio a uma aresta | 30% | 27% | 35% | 32% 
 *Parâmetros utilizados na geração das instâncias do grupo h*
 ***
  | Variável | ia | ib | ic | id
@@ -52,8 +55,7 @@ A Tabela 1 mostra os parâmetros selecionados para todas as configurações, enq
  | Custo mínimo da aresta | 826 | 661 | 649 | 890
  | Custo máximo da aresta | 1110 | 1017 | 931 | 1182
  | Simétrico? | Sim | Não | Sim | Não | 
- | Chance de adicionar pedágio a uma aresta | 23% | 29% | 38% | 32%
- 
+ | Chance de adicionar pedágio a uma aresta | 23% | 29% | 38% | 32% 
 *Parâmetros utilizados na geração das instâncias do grupo i*
 ***
 
