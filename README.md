@@ -19,60 +19,54 @@ A Tabela 1 mostra os parâmetros selecionados para todas as configurações, com
 
 Tabela 2 mostra os parâmetros sorteados para as configurações do grupo g, a Tabela 3 mostra os parâmetros sorteados para as configurações do grupo h, e Tabela 4 mostra os parâmetros sorteados para as configurações do grupo i. As tabelas definem o valor mínimo e máximo das arestas do grafo de custo, se os grafos de custo e tempo serão simétricos ou assimétricos, e a probabilidade de uma aresta conter um pedágio.
 
-|Variável | Mínimo | Máximo | 
-|---|:---:|:---:|
-|Tempo da aresta | 600 | 1200 | 
-|Bônus do vértice | 200 | 700 | 
-|Tempo do vértice | 700 | 1100 | 
-|Custo do pedágio | 3000 | 4000 | 
-|Janela de tempo | 200% | 300% | 
-|Tarifa máxima | 200% | 400% | 
-|Capacidade do veículo | 4 passageiros + motorista |-| 
-|Limite do pedágio | 2 | 3 | 
-|Quantidade de passageiros por vértice | 2*capacidade | 3*capacidade | 
-|Tamanho do universo de tempo | 40% | 70% |
+| Variável | Mínimo | Máximo | 
+| --- | :---: | :---: |
+| Tempo da aresta | 600 | 1200 | 
+| Bônus do vértice | 200 | 700 | 
+| Tempo do vértice | 700 | 1100 | 
+| Custo do pedágio | 3000 | 4000 | 
+| Janela de tempo | 200% | 300% | 
+| Tarifa máxima | 200% | 400% | 
+| Capacidade do veículo | 4 passageiros + motorista |-| 
+| Limite do pedágio | 2 | 3 | 
+| Quantidade de passageiros por vértice | 2*capacidade | 3*capacidade | 
+| Tamanho do universo de tempo | 40% | 70% |
 
 *Tabela 1. Parâmetros utilizados na geração das instâncias, comum a todos os grupos*
 
-
- | Variável | ga | gb | gc | gd | 
- | --- | :---: | :---: | :---: | :---: | 
- | Custo mínimo da aresta | 676 | 888 | 715 | 908 | 
- | Custo máximo da aresta | 966 | 1188 | 983 | 1252 | 
- | Simétrico? | Sim | Não | Sim | Não | 
- | Chance de adicionar pedágio a uma aresta | 27% | 22% | 34% | 37% | 
+| Variável | ga | gb | gc | gd | 
+| --- | :---: | :---: | :---: | :---: | 
+| Custo mínimo da aresta | 676 | 888 | 715 | 908 | 
+| Custo máximo da aresta | 966 | 1188 | 983 | 1252 | 
+| Simétrico? | Sim | Não | Sim | Não | 
+| Chance de adicionar pedágio a uma aresta | 27% | 22% | 34% | 37% | 
  
-*Parâmetros utilizados na geração das instâncias do grupo g*
+*Tabela 2. Parâmetros utilizados na geração das instâncias do grupo g*
 
- | Variável | ha | hb | hc | hd
- | --- | :---: | :---: | :---: | :---: | 
- | Custo mínimo da aresta | 560 | 777 | 630 | 781
- | Custo máximo da aresta | 926 | 1051 | 944 | 1111
- | Simétrico? | Sim | Não | Sim | Não | 
- | Chance de adicionar pedágio a uma aresta | 30% | 27% | 35% | 32% 
+| Variável | ha | hb | hc | hd
+| --- | :---: | :---: | :---: | :---: | 
+| Custo mínimo da aresta | 560 | 777 | 630 | 781
+| Custo máximo da aresta | 926 | 1051 | 944 | 1111
+| Simétrico? | Sim | Não | Sim | Não | 
+| Chance de adicionar pedágio a uma aresta | 30% | 27% | 35% | 32% 
  
-*Parâmetros utilizados na geração das instâncias do grupo h*
+*Tabela 3. Parâmetros utilizados na geração das instâncias do grupo h*
 
- | Variável | ia | ib | ic | id
- | --- | :---: | :---: | :---: | :---: | 
- | Custo mínimo da aresta | 826 | 661 | 649 | 890
- | Custo máximo da aresta | 1110 | 1017 | 931 | 1182
- | Simétrico? | Sim | Não | Sim | Não | 
- | Chance de adicionar pedágio a uma aresta | 23% | 29% | 38% | 32% 
+| Variável | ia | ib | ic | id
+| --- | :---: | :---: | :---: | :---: | 
+| Custo mínimo da aresta | 826 | 661 | 649 | 890
+| Custo máximo da aresta | 1110 | 1017 | 931 | 1182
+| Simétrico? | Sim | Não | Sim | Não | 
+| Chance de adicionar pedágio a uma aresta | 23% | 29% | 38% | 32% 
  
-*Parâmetros utilizados na geração das instâncias do grupo i*
+*Tabela 4. Parâmetros utilizados na geração das instâncias do grupo i*
 
 Para as instâncias do grupo h e i, o custo dos pedágios são recalculados de acordo com o custo da aresta que o contém. A Tabela 5 mostra como os custos são modificados. Para as instâncias do grupo i, os custos das arestas são recalculados de acordo com o bônus dos vértices nos quais a aresta é incidente. Neste caso, a incidência de uma aresta sobre um vértice significa que uma aresta (i,j) é incidente sobre os vértices i e j. A Tabela 6 mostra como os custo são modificados. Para as instâncias do grupo i, a quantidade de passageiros em um vértice é definida a partir da quantidade do bônus do vértice e da capacidade do veículo. A Tabela 7 mostra quais são os valores estipulados.
 
-Se o custo da aresta for:
+| Custo da aresta | >= 900	 | < 900, >= 500	 | < 500  |
+| Modificação no custo do pedágio | 0 | 1000 | Entre 2500 e 3000 |
 
-`>= 900	< 900, >= 500	< 500`
-
-É somado ao custo do pedágio da aresta, se existir:
-
-`0	1000	Entre 2500 e 3000`
-
-*Ajuste do custo do pedágio de acordo com o custo da respectiva aresta, para as instâncias do grupo h e i*
+*Tabela 5. Ajuste do custo do pedágio de acordo com o custo da respectiva aresta, para as instâncias do grupo h e i*
 
 Se o bônus do vértice for:
 
