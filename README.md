@@ -11,7 +11,7 @@ Os parâmetros foram divididos em 2 categorias: os parâmetros comuns a todas as
 
 Para a geração dos pedágios, para cada aresta foi dado uma probabilidade de conter um pedágio. Caso a aresta contenha um, o courier será obrigado a pagar o valor do pedágio caso a quantidade de passageiros no veículo seja inferior à quantidade estipulada por cada pedágio.
 
-O universo de tempo é responsável por limitar os valores da janela de tempo, controlando-as de tal forma que não existam janelas de tempo que não podem ser alcançandas ou buscando limitar o tamanho da solução criando janelas que só serão disponíveis no começo da solução. O valor do universo de tempo é calculado a partir da média das arestas do grafo de tempo, multiplcado pelo tamanho do grafo e por fim, multiplicado por uma porcentagem.
+O universo de tempo é responsável por limitar os valores da janela de tempo, controlando-as de tal forma que não existam janelas de tempo que não podem ser alcançadas ou buscando limitar o tamanho da solução criando janelas que só serão disponíveis no começo da solução. O valor do universo de tempo é calculado a partir da média das arestas do grafo de tempo, multiplicado pelo tamanho do grafo e por fim, multiplicado por uma porcentagem.
 
 Para o cálculo da janela de tempo, o universo de tempo será dividido em 3 setores, com o primeiro setor sendo de 0% a 30% do universo de tempo, o segundo setor sendo de 35% a 65% do universo de tempo e o terceiro setor sendo de 70% a 100% da janela de tempo. O limite inferior de cada janela de tempo será sorteada de tal forma que o seu valor esteja dentro de um desses três setores. O limite superior da janela de tempo é então calculado a partir do valor do caminho mais curto no grafo de tempo entre o vértice de origem e o vértice de destino do passageiro, multiplicado por uma porcentagem.
 
@@ -34,7 +34,6 @@ Tabela 2 mostra os parâmetros sorteados para as configurações do grupo g, a T
 
 *Tabela 1. Parâmetros utilizados na geração das instâncias, comum a todos os grupos*
 
-
 | Variável | ga | gb | gc | gd | 
 | --- | :---: | :---: | :---: | :---: | 
 | Custo mínimo da aresta | 676 | 888 | 715 | 908 | 
@@ -43,7 +42,6 @@ Tabela 2 mostra os parâmetros sorteados para as configurações do grupo g, a T
 | Chance de adicionar pedágio a uma aresta | 27% | 22% | 34% | 37% | 
  
 *Tabela 2. Parâmetros utilizados na geração das instâncias do grupo g*
-
 
 | Variável | ha | hb | hc | hd
 | --- | :---: | :---: | :---: | :---: | 
@@ -54,7 +52,6 @@ Tabela 2 mostra os parâmetros sorteados para as configurações do grupo g, a T
  
 *Tabela 3. Parâmetros utilizados na geração das instâncias do grupo h*
 
-
 | Variável | ia | ib | ic | id
 | --- | :---: | :---: | :---: | :---: | 
 | Custo mínimo da aresta | 826 | 661 | 649 | 890
@@ -64,8 +61,7 @@ Tabela 2 mostra os parâmetros sorteados para as configurações do grupo g, a T
  
 *Tabela 4. Parâmetros utilizados na geração das instâncias do grupo i*
 
-
-Para as instâncias do grupo h e i, o custo dos pedágios são recalculados de acordo com o custo da aresta que o contém. A Tabela 5 mostra como os custos são modificados. Para as instâncias do grupo i, os custos das arestas são recalculados de acordo com o bônus dos vértices nos quais a aresta é incidente. Neste caso, a incidência de uma aresta sobre um vértice significa que uma aresta (i,j) é incidente sobre os vértices i e j. A Tabela 6 mostra como os custo são modificados. Para as instâncias do grupo i, a quantidade de passageiros em um vértice é definida a partir da quantidade do bônus do vértice e da capacidade do veículo. A Tabela 7 mostra quais são os valores estipulados.
+    Para as instâncias do grupo h e i, o custo dos pedágios são recalculados de acordo com o custo da aresta que o contém. A Tabela 5 mostra como os custos são modificados. Para as instâncias do grupo i, os custos das arestas são recalculados de acordo com o bônus dos vértices nos quais a aresta é incidente. Neste caso, a incidência de uma aresta sobre um vértice significa que uma aresta (i,j) é incidente sobre os vértices i e j. A Tabela 6 mostra como os custo são modificados. Para as instâncias do grupo i, a quantidade de passageiros em um vértice é definida a partir da quantidade do bônus do vértice e da capacidade do veículo. A Tabela 7 mostra quais são os valores estipulados.
 
 | Custo da aresta | >= 900	 | < 900, >= 500	 | < 500  |
 | :--- | :---: | :---: | :---: |
@@ -73,14 +69,14 @@ Para as instâncias do grupo h e i, o custo dos pedágios são recalculados de a
 
 *Tabela 5. Ajuste do custo do pedágio de acordo com o custo da respectiva aresta, para as instâncias do grupo h e i*
 
-
 | Bônus do vértice | >= 550	| < 550, >= 350 |	< 350 |
+| :--- | :---: | :---: | :---: |
 |	Modificação no custo de todas as arestas que contém aquele vértice  |	Entre 300 e 500 |	Entre 100 e 200 |	Entre -100 e -150 |
 
 *Tabela 6. Ajuste do custo da aresta de acordo com o bônus dos vértices relacionados, para as instâncias do grupo i*
 
-
 |	Bônus do vértice |	>= 300 |	< 300, >= 200 |	< 200 |
+| :--- | :---: | :---: | :---: |
 |	Quantidade de passageiros no vértice |	Entre 3C e 4C |	Entre 2C e 3C |	Entre 1C e 2C |
 
 *Tabela 7. Quantidade de passageiros por vértice de acordo com o bônus do vértice, para as instâncias do grupo i, a partir da capacidade do veículo C*
