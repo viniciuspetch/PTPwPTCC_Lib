@@ -67,8 +67,8 @@ Tabela 2 mostra os parâmetros sorteados para as configurações do grupo g, a T
 
 Para as instâncias do grupo h e i, o custo dos pedágios são recalculados de acordo com o custo da aresta que o contém. A Tabela 5 mostra como os custos são modificados. Para as instâncias do grupo i, os custos das arestas são recalculados de acordo com o bônus dos vértices nos quais a aresta é incidente. Neste caso, a incidência de uma aresta sobre um vértice significa que uma aresta (i,j) é incidente sobre os vértices i e j. A Tabela 6 mostra como os custo são modificados. Para as instâncias do grupo i, a quantidade de passageiros em um vértice é definida a partir da quantidade do bônus do vértice e da capacidade do veículo. A Tabela 7 mostra quais são os valores estipulados.
 
-| --- | --- | --- | --- |
 | Custo da aresta | >= 900	 | < 900, >= 500	 | < 500  |
+| --- | --- | --- | --- |
 | Modificação no custo do pedágio | 0 | 1000 | Entre 2500 e 3000 |
 
 *Tabela 5. Ajuste do custo do pedágio de acordo com o custo da respectiva aresta, para as instâncias do grupo h e i*
